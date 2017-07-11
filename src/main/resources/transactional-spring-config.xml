@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/springDemo"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="username" value="root"/>
+        <property name="password" value="tanuj"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="accountService" class="com.spring.demo.AccountService">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+        <property name="accountService" ref="accountService"/>
+    </bean>
+<bean id="useraccountService" class="com.spring.demo.UserAccountService">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    <property name="transactionManager" ref="transactionManager"/>
+    <property name="userAccountService2" ref="userAccountService2"/>
+</bean>
+    <bean id="userAccountService2" class="com.spring.demo.UserAccountService2">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+</beans>

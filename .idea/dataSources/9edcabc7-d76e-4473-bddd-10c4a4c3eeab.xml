@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="springDemo@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="springDemo">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="eclipse_sql"/>
+    <schema id="4" parent="1" name="hibernate"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="onshop"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="sampledb"/>
+    <schema id="10" parent="1" name="sys"/>
+    <schema id="11" parent="1" name="tanuj"/>
+    <schema id="12" parent="1" name="ttn"/>
+    <table id="13" parent="2" name="AccountTransaction"/>
+    <table id="14" parent="2" name="UserAccount"/>
+    <column id="15" parent="13" name="sender">
+      <Position>1</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="16" parent="13" name="reciever">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="17" parent="13" name="balanceTransfered">
+      <Position>3</Position>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <column id="18" parent="14" name="name">
+      <Position>1</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="19" parent="14" name="Balance">
+      <Position>2</Position>
+      <DataType>int(10)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>

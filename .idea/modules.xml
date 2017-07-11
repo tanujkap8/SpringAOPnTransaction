@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPnTransaction.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPnTransaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPnTransaction_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPnTransaction_main.iml" group="SpringAOPnTransaction" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringAOPnTransaction_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringAOPnTransaction_test.iml" group="SpringAOPnTransaction" />
+    </modules>
+  </component>
+</project>
